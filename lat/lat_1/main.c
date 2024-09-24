@@ -11,3 +11,4 @@ void main()
         printf("Judul: %s \nPenulis: %s \nTahun Terbit: %d \n\n", judul[i], penulis[i], t_terbit[i]);
     }
 }
+
