@@ -22,7 +22,7 @@ int main(){
     printf("Umur: %d\n", umur);
     printf("Gaji pokok: Rp.%.2f\n", gaji_pokok);
     printf("Tunjangan: Rp.%.2f\n", tunjangan);
-    printf("Total gaji: Rp.%2.f\n", total_gaji);
+    printf("Total gaji: Rp.%.2f\n", total_gaji);
 
     return 0;
 }

@@ -17,7 +17,7 @@ int main()
     printf("Perkalian: %d\n", product);
 
     if(b != 0){
-        float division = (float) a / b; //Karena a,b di awal itu int jadi diconvert dulu ke int
+        float division = (float) a / b; 
         printf("Pembagian: %.2f", division);
     } else {
         printf("Tidak bisa pembagian dengan nilai 0");
