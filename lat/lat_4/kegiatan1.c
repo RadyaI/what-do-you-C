@@ -9,7 +9,7 @@ int main()
     printf("--- Program Penghitung Nilai Akhir Mahasiswa ---\n");
 
     printf("Masukkan Nama Mahasiswa: ");
-    scanf("%s", nama);
+    scanf("%[^\n]", nama);
     printf("Masukkan NIM Mahasiswa: ");
     scanf("%lld", &nim);
     printf("Masukkan Nilai Tugas (0-100): ");
@@ -19,7 +19,7 @@ int main()
     printf("Masukkan Nilai UAS (0-100): ");
     scanf("%f", &nilai_uas);
 
-    if (nilai_akhir > 100 || nilai_akhir < 0 ||
+    if (nilai_tugas > 100 || nilai_tugas < 0 ||
         nilai_uas > 100 || nilai_uas < 0 ||
         nilai_uts > 100 || nilai_uts < 0)
     {
@@ -28,7 +28,7 @@ int main()
     else
     {
         nilai_akhir = (nilai_tugas * 0.20) + (nilai_uts * 0.35) + (nilai_uas * 0.45);
-
+        
         printf("------------------------------------------------\n");
         printf("Nama Mahasiswa: %s\n", nama);
         printf("NIM Mahasiswa: %lld\n", nim);
