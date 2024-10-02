@@ -1,19 +1,19 @@
-#include <stdio.h>
+#include <stdio.h> 
 
 int main()
 {
-    char nama[50];
-    long long int nim;
+    char nama[50]; 
+    long long int nim; 
     float nilai_tugas, nilai_uts, nilai_uas, nilai_akhir;
 
     printf("--- Program Penghitung Nilai Akhir Mahasiswa ---\n");
 
-    printf("Masukkan Nama Mahasiswa: ");
-    scanf("%[^\n]", nama);
+    printf("Masukkan Nama Mahasiswa: "); 
+    scanf("%[^\n]", nama); 
     printf("Masukkan NIM Mahasiswa: ");
     scanf("%lld", &nim);
     printf("Masukkan Nilai Tugas (0-100): ");
-    scanf("%f", &nilai_tugas);
+    scanf("%f", &nilai_tugas); 
     printf("Masukkan Nilai UTS (0-100): ");
     scanf("%f", &nilai_uts);
     printf("Masukkan Nilai UAS (0-100): ");

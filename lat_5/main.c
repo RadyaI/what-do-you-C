@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 float luaslingkaran(float radius);
-
 int main()
 {
 
@@ -11,7 +9,6 @@ int main()
     printf("Luas Lingkaran: %.2f", hasil);
     return 0;
 }
-
 float luaslingkaran(float radius)
 {
 
