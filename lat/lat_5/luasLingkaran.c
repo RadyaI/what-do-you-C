@@ -24,17 +24,17 @@ int main()
                 isValid = validasiInputRadius(radius);
                 if (!isValid)
                 {
-                    printf("Radius tidak boleh negatif atau nol. Silakan coba lagi.\n");
+                    printf("Radius gabole negatif atau nol. Coba lagi lah.\n");
                 }
             } while (!isValid);
             hasil = luaslingkaran(radius);
             printf("Luas lingkaran dengan radius %.2f adalah: %.2f\n\n", radius, hasil);
             break;
         case 2:
-            printf("Terima kasih telah menggunakan program ini. Sampai jumpa!\n");
+            printf("Woke semoga kamu tambah pintar.\n");
             break;
         default:
-            printf("Pilihan tidak valid. Silakan coba lagi.\n");
+            printf("Pilih yang bener wak!\n");
         }
     } while (pilihan != 2);
     return 0;
