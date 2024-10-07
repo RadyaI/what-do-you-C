@@ -1,25 +1,39 @@
 #include <stdio.h>
-
-// Fungsi dideklarasiin dulu
-// Apa jadinya kalo tidak dideklarasiin? => Error karena pada fungsi main sudah memanggil fungsi getUmur()
-// tapi di atas fungsi main tidak ada apa apa
-
-// fyi file kodingan di eksekusi dari atas ke bawah
-
-int getUmur();
-
-int main()
+void main()
 {
-    // Disini fungsi getUmur() dipanggil
-    int u = getUmur();
-    printf("Umur saya %d", u);
+    int nilai = 80;
+    char grade;
 
-    return 0;
-}
+    // if (nilai >= 80)
+    // {
+    //     grade = 'A';
+    //     printf("nilai dapat %c\n", grade);
+    // }
+    // else if (nilai >= 60)
+    // {
+    //     grade = 'B';
+    //     printf("nilai dapat %c\n", grade);
+    // }
+    // else
+    // {
+    //     grade = 'C';
+    //     printf("nilai dapat %c\n", grade);
+    // }
 
-// Nah disini baru dipake
-int getUmur()
-{
-    int umurKu = 20;
-    return umurKu;
+    switch (grade)
+    {
+    case 'A':
+        printf("Selamat Anda Lulus");
+        break;
+
+    case 'B':
+        printf("Anda Lulus dengan remidi");
+        break;
+
+    case 'C':
+        printf("Anda Tidak Lulus");
+        break;
+    default:
+        break;
+    }
 }
