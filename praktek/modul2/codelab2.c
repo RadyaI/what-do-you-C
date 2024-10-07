@@ -13,6 +13,7 @@ int main()
 
     char greeting[] = "Hello, World!";
     char copyGreeting[20];
+    
     strcpy(copyGreeting, greeting);
 
     printf("\nString operations:\n");
