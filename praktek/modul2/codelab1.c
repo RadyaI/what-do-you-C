@@ -24,15 +24,12 @@ void getKalori()
     printf("Masukkan kalori ketiga: ");
     scanf("%f", &mKetiga);
 
-    do
-    {
-        hasil = hitungKalori(mPertama, mKedua, mKetiga);
-    } while (mPertama < 0 || mKedua < 0 || mKetiga < 0);
+    hasil = hitungKalori(mPertama, mKedua, mKetiga);
 
     printf("\nTotal Kalori: %.0f\n", hasil);
     if (hasil > batasHarian)
     {
-        printf("Total Kalori Melebihi Batas, Diet broo!");
+        printf("Total Kalori Melebihi Batas, Stooppp broo!");
     }
     else if (hasil > batasHarian - 500)
     {
