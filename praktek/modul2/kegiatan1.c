@@ -3,14 +3,15 @@
 
 const float PHI = 3.14159;
 
-float luaslingkaran(float radius);
-float kelilinglingkaran(float radius);
-float ambilInputRadius();
+float luasLingkaran(float radius);
+float kelilingLingkaran(float radius);
+void ambilInputRadius(float *radius);
 bool validasiInputRadius(float radius);
 
 int main()
 {
-    float radius = ambilInputRadius();
+    float radius;
+    ambilInputRadius(&radius);
 
     if (!validasiInputRadius(radius))
     {
@@ -18,8 +19,8 @@ int main()
         return 1;
     }
 
-    float luas = luaslingkaran(radius);
-    float keliling = kelilinglingkaran(radius);
+    float luas = luasLingkaran(radius);
+    float keliling = kelilingLingkaran(radius);
 
     printf("\nLuas lingkaran: %.2f\n", luas);
     printf("Keliling lingkaran: %.2f\n", keliling);
@@ -27,22 +28,20 @@ int main()
     return 0;
 }
 
-float luaslingkaran(float radius)
+float luasLingkaran(float radius)
 {
     return PHI * radius * radius;
 }
 
-float kelilinglingkaran(float radius)
+float kelilingLingkaran(float radius)
 {
     return 2 * PHI * radius;
 }
 
-float ambilInputRadius()
+void ambilInputRadius(float *radius)
 {
-    float radius;
     printf("Masukkan nilai jari-jari lingkaran: ");
-    scanf("%f", &radius);
-    return radius;
+    scanf("%f", radius);
 }
 
 bool validasiInputRadius(float radius)
