@@ -46,5 +46,5 @@ void ambilInputRadius(float *radius)
 
 bool validasiInputRadius(float radius)
 {
-    return (radius > 0);
+    return radius > 0;
 }
