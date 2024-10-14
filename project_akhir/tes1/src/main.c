@@ -3,7 +3,7 @@
 #include "../include/database.h"
 
 int main() {
-    load_database(); // Memanggil untuk memuat data dari file database
+    load_database();
 
     int pilihan;
     do {

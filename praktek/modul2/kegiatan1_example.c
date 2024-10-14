@@ -1,26 +1,28 @@
 #include <stdio.h>
 
-#define PI 3.14159
+const float PHI = 3.14159;
 
 int main()
 {
-    float jariJari;
-    float luas, keliling;
 
-    printf("Masukkan jari-jari lingkaran: ");
-    scanf("%f", &jariJari);
+    float r, hLuas, hKeliling;
 
-    if (jariJari <= 0)
+    printf("Masukkan jari-jari: ");
+    scanf("%f", &r);
+
+    if (r <= 0)
     {
-        printf("Input tidak valid. Pastikan jari-jari lebih besar dari 0.\n");
-        return 1;
+        printf("Jari-jari tidak boleh negatif");
+        return 0;
     }
+    else
+    {
+        hLuas = PHI * r * r;
+        hKeliling = 2 * PHI * r;
 
-    luas = PI * jariJari * jariJari;
-    keliling = 2 * PI * jariJari;
-
-    printf("Luas lingkaran: %.2f\n", luas);
-    printf("Keliling lingkaran: %.2f\n", keliling);
+        printf("\nLuas Lingkaran: %.2f\n", hLuas);
+        printf("Keliling Lingkaran: %.2f", hKeliling);
+    }
 
     return 0;
 }
