@@ -16,20 +16,19 @@ enum JenisTiket
     Utama
 };
 
-void tampilkanDashboard();
 void pilihFilmDanTiket(int *film, int *tiket);
 float hitungHargaFilm(int film);
 float hitungHargaTiket(int tiket);
-float hitungDiskon(float totalHarga, int member);
+float hitungDiskon(float totalHarga, char member);
 void tampilkanTotalHarga(float totalHarga);
 void prosesPembayaran(float totalHarga);
 
 int main()
 {
-    int film, tiket, member;
+    int film, tiket;
+    char member;
     float hargaFilm, hargaTiket, totalHarga, diskon;
 
-    tampilkanDashboard();
     pilihFilmDanTiket(&film, &tiket);
 
     hargaFilm = hitungHargaFilm(film);
@@ -37,15 +36,21 @@ int main()
 
     totalHarga = hargaFilm + hargaTiket;
 
-    printf("\nApakah Anda member bioskop? (1 untuk Ya, 0 untuk Tidak): ");
-    scanf("%d", &member);
+    do
+    {
+        printf("\nApakah Anda member bioskop? (Y/N): ");
+        scanf(" %c", &member);
+        if (member != 'Y' && member != 'y' && member != 'N' && member != 'n')
+        {
+            printf("Input tidak valid, silakan masukkan Y atau N.\n");
+        }
+    } while (member != 'Y' && member != 'y' && member != 'N' && member != 'n');
 
-    diskon = hitungDiskon(totalHarga, member);
-    totalHarga -= diskon;
-
-    if (member == 1)
+    if (member == 'Y' || member == 'y')
     {
         printf("Anda mendapat diskon 10%%\n");
+        diskon = hitungDiskon(totalHarga, member);
+        totalHarga -= diskon;
     }
 
     tampilkanTotalHarga(totalHarga);
@@ -54,7 +59,7 @@ int main()
     return 0;
 }
 
-void tampilkanDashboard()
+void pilihFilmDanTiket(int *film, int *tiket)
 {
     printf("=== SELAMAT DATANG DI BIOSKOP ===\n");
     printf("1. Film Pilihan:\n");
@@ -63,19 +68,29 @@ void tampilkanDashboard()
     printf("   3. Batman\n");
     printf("   4. Superman\n");
     printf("   5. Ironman\n");
+    do
+    {
+        printf("\nMasukkan pilihan film (1-5): ");
+        scanf("%d", film);
+        if (*film < 1 || *film > 5)
+        {
+            printf("Pilihan film tidak valid, silakan coba lagi.\n");
+        }
+    } while (*film < 1 || *film > 5);
 
     printf("\n2. Jenis Tiket:\n");
     printf("   1. Ekonomi\n");
     printf("   2. Bisnis\n");
     printf("   3. Utama\n");
-}
-
-void pilihFilmDanTiket(int *film, int *tiket)
-{
-    printf("\nMasukkan pilihan film (1-5): ");
-    scanf("%d", film);
-    printf("Masukkan jenis tiket (1-3): ");
-    scanf("%d", tiket);
+    do
+    {
+        printf("Masukkan jenis tiket (1-3): ");
+        scanf("%d", tiket);
+        if (*tiket < 1 || *tiket > 3)
+        {
+            printf("Pilihan jenis tiket tidak valid, silakan coba lagi.\n");
+        }
+    } while (*tiket < 1 || *tiket > 3);
 }
 
 float hitungHargaFilm(int film)
@@ -112,12 +127,13 @@ float hitungHargaTiket(int tiket)
     }
 }
 
-float hitungDiskon(float totalHarga, int member)
+float hitungDiskon(float totalHarga, char member)
 {
-    if (member == 1)
+    if (member == 'Y' || member == 'y')
     {
         return totalHarga * 0.10;
     }
+
     return 0;
 }
 
@@ -143,6 +159,6 @@ void prosesPembayaran(float totalHarga)
     }
     else
     {
-        printf("Terima kasih! Pembayaran Anda tepat.\n");
+        printf("Terima kasih! Uang anda pas.\n");
     }
 }
