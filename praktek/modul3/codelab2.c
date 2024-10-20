@@ -1,39 +1,48 @@
 #include <stdio.h>
 
-enum TicketClass
+enum kelas
 {
-    Economy = 1,
-    Business,
-    FirstClass
+    Economy = 500,
+    Business = 1000,
+    FirstClass = 1500
 };
+
+void menu();
+void selectClass();
 
 int main()
 {
-    int pilihan;
+    menu();
+    selectClass();
+    return 0;
+}
 
-    printf("Pilih kelas tiket:\n1. Economy (Kelas Ekonomi)\n2. Business (Kelas Bisnis)\n3. FirstClass (Kelas Utama)\n");
+void menu()
+{
+    printf("Pilih Kelas Tiket: ");
+    printf("\n1. Economy\n2. Business\n3. First Class\n");
+}
 
-    printf("Masukkan pilihan Anda (1-3): ");
-    scanf("%d", &pilihan);
+void selectClass()
+{
+    int input;
 
-    switch (pilihan)
+    printf("Masukkan Pilihan (1-3): ");
+    scanf("%d", &input);
+
+    switch (input)
     {
-    case Economy:
-        printf("\nAnda memilih Kelas Ekonomi.\n");
-        printf("Harga tiket Kelas Ekonomi adalah: Rp. 500.000\n");
+    case 1:
+        printf("Harga tiket kelas ekonomi: $%d", Economy);
         break;
-    case Business:
-        printf("\nAnda memilih Kelas Bisnis.\n");
-        printf("Harga tiket Kelas Bisnis adalah: Rp. 1.500.000\n");
+    case 2:
+        printf("Harga tiket kelas bisnis: $%d", Business);
         break;
-    case FirstClass:
-        printf("\nAnda memilih Kelas Utama.\n");
-        printf("Harga tiket Kelas Utama adalah: Rp. 5.000.000\n");
+    case 3:
+        printf("Harga tikat First Class: $%d", FirstClass);
         break;
     default:
-        printf("\nPilihan tidak valid. Silakan pilih antara 1-3.\n");
+        printf("Input tidak valid!");
         break;
     }
-
-    return 0;
 }
