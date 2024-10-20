@@ -19,7 +19,7 @@ enum JenisTiket
 void pilihFilmDanTiket(int *film, int *tiket);
 float hitungHargaFilm(int film);
 float hitungHargaTiket(int tiket);
-float hitungDiskon(float totalHarga, char member);
+float hitungDiskon(float totalHarga);
 void tampilkanTotalHarga(float totalHarga);
 void prosesPembayaran(float totalHarga);
 
@@ -49,7 +49,7 @@ int main()
     if (member == 'Y' || member == 'y')
     {
         printf("Anda mendapat diskon 10%%\n");
-        diskon = hitungDiskon(totalHarga, member);
+        diskon = hitungDiskon(totalHarga);
         totalHarga -= diskon;
     }
 
@@ -127,14 +127,9 @@ float hitungHargaTiket(int tiket)
     }
 }
 
-float hitungDiskon(float totalHarga, char member)
+float hitungDiskon(float totalHarga)
 {
-    if (member == 'Y' || member == 'y')
-    {
-        return totalHarga * 0.10;
-    }
-
-    return 0;
+    return totalHarga * 0.10;
 }
 
 void tampilkanTotalHarga(float totalHarga)
