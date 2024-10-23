@@ -18,7 +18,7 @@ int main()
         }
         else
         {
-            printf("Mohon maaf penumpang minimal berumur 4 bulan\n");
+            printf("Mohon maaf jika dibawah 1 tahun penumpang minimal berumur 4 bulan dan maximal 12 bulan\n");
         }
     }
     else if (umur < 0)
@@ -30,7 +30,7 @@ int main()
         printf("Mohon maaf penumpang maximal berumur 120 tahun");
     }
     else
-    {
+    {   
 
         if (umur < 2)
         {
