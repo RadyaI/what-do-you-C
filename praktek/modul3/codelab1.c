@@ -2,14 +2,28 @@
 
 int main()
 {
-    int umur;
+    int umur, bulan;
 
     printf("Masukkan umur penumpang: ");
     scanf("%d", &umur);
 
-    if (umur == 0 || umur < 0)
+    if (umur == 0)
     {
-        printf("Mohon Maaf penumpang minimal berumur 1 tahun");
+        printf("Masukkan bulan keberapa (1 - 12): ");
+        scanf("%d", &bulan);
+
+        if (bulan > 3 && bulan < 12)
+        {
+            printf("Penumpang mendapatkan tiket gratis.\n");
+        }
+        else
+        {
+            printf("Mohon maaf penumpang minimal berumur 4 bulan\n");
+        }
+    }
+    else if (umur < 0)
+    {
+        printf("Input tidak valid\n");
     }
     else if (umur > 120)
     {
