@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Deklarasi fungsi
 int inputJumlahTransaksi();
 void inputTransaksi(int jumlahTransaksi, int *total);
 void tambahTransaksi(int *total, int *jumlahTransaksi);
@@ -58,7 +57,7 @@ void tambahTransaksi(int *total, int *jumlahTransaksi) {
                 printf("Transaksi tidak boleh negatif.\n");
                 continue;
             }
-
+            
             *total += transaksi;
             (*jumlahTransaksi)++;
             printf("Total sementara adalah: Rp.%d\n", *total);

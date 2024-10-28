@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 enum Film
 {
@@ -68,29 +69,37 @@ void pilihFilmDanTiket(int *film, int *tiket)
     printf("   3. Batman\n");
     printf("   4. Superman\n");
     printf("   5. Ironman\n");
-    do
-    {
+
+    while (1) {
         printf("\nMasukkan pilihan film (1-5): ");
-        scanf("%d", film);
-        if (*film < 1 || *film > 5)
-        {
+        if (scanf("%d", film) != 1) {
+            printf("Mohon masukkan angka!\n");
+            exit(1);
+        }
+        if (*film >= 1 && *film <= 5) {
+            break;
+        } else {
             printf("Pilihan film tidak valid, silakan coba lagi.\n");
         }
-    } while (*film < 1 || *film > 5);
+    }
 
     printf("\n2. Jenis Tiket:\n");
     printf("   1. Ekonomi\n");
     printf("   2. Bisnis\n");
     printf("   3. Utama\n");
-    do
-    {
+
+    while (1) {
         printf("Masukkan jenis tiket (1-3): ");
-        scanf("%d", tiket);
-        if (*tiket < 1 || *tiket > 3)
-        {
+        if (scanf("%d", tiket) != 1) {
+            printf("Mohon masukkan angka!\n");
+            exit(1);
+        }
+        if (*tiket >= 1 && *tiket <= 3) {
+            break;
+        } else {
             printf("Pilihan jenis tiket tidak valid, silakan coba lagi.\n");
         }
-    } while (*tiket < 1 || *tiket > 3);
+    }
 }
 
 float hitungHargaFilm(int film)
