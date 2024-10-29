@@ -3,11 +3,11 @@
 
 enum Film
 {
-    Film1 = 1,
-    Film2,
-    Film3,
-    Film4,
-    Film5
+    Avengers = 1,
+    Spiderman,
+    Batman,
+    Superman,
+    Ironman
 };
 
 enum JenisTiket
@@ -116,15 +116,15 @@ float hitungHargaFilm(int film)
 {
     switch (film)
     {
-    case Film1:
+    case Avengers:
         return 75000;
-    case Film2:
+    case Spiderman:
         return 80000;
-    case Film3:
+    case Batman:
         return 85000;
-    case Film4:
+    case Superman:
         return 90000;
-    case Film5:
+    case Ironman:
         return 95000;
     default:
         return 0;
