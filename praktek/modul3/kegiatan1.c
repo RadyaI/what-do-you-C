@@ -70,15 +70,20 @@ void pilihFilmDanTiket(int *film, int *tiket)
     printf("   4. Superman\n");
     printf("   5. Ironman\n");
 
-    while (1) {
+    while (1)
+    {
         printf("\nMasukkan pilihan film (1-5): ");
-        if (scanf("%d", film) != 1) {
+        if (scanf("%d", film) != 1)
+        {
             printf("Mohon masukkan angka!\n");
             exit(1);
         }
-        if (*film >= 1 && *film <= 5) {
+        if (*film >= 1 && *film <= 5)
+        {
             break;
-        } else {
+        }
+        else
+        {
             printf("Pilihan film tidak valid, silakan coba lagi.\n");
         }
     }
@@ -88,15 +93,20 @@ void pilihFilmDanTiket(int *film, int *tiket)
     printf("   2. Bisnis\n");
     printf("   3. Utama\n");
 
-    while (1) {
+    while (1)
+    {
         printf("Masukkan jenis tiket (1-3): ");
-        if (scanf("%d", tiket) != 1) {
+        if (scanf("%d", tiket) != 1)
+        {
             printf("Mohon masukkan angka!\n");
             exit(1);
         }
-        if (*tiket >= 1 && *tiket <= 3) {
+        if (*tiket >= 1 && *tiket <= 3)
+        {
             break;
-        } else {
+        }
+        else
+        {
             printf("Pilihan jenis tiket tidak valid, silakan coba lagi.\n");
         }
     }
