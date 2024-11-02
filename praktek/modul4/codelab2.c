@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main() {
-    char str[100];
+    char str[100]; 
     int i, j;
     int unique;
 
