@@ -119,7 +119,7 @@ float hitungHargaFilm(int film)
     case Avengers:
         return 75000;
     case Spiderman:
-        return 80000;
+        return 55000;
     case Batman:
         return 85000;
     case Superman:
