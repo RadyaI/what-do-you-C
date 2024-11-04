@@ -6,7 +6,7 @@ int main() {
     int i, j;
     int unique;
 
-    printf("Masukkan sebuah string: ");
+    printf("Masukkan sebuah string/kata: ");
     fgets(str, sizeof(str), stdin);
 
     int find = strcspn(str, "\n");
