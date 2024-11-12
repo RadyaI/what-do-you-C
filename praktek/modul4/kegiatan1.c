@@ -26,7 +26,7 @@ int inputJumlahTransaksi() {
 
 void inputTransaksi(int jumlahTransaksi, int *total) {
     int transaksi;
-    for (int i = 1; i <= jumlahTransaksi; i++) {
+    for (int i = 1; i <= jumlahTransaksi;) {
         printf("Masukkan nilai transaksi ke-%d: ", i);
         scanf("%d", &transaksi);
 
@@ -34,7 +34,7 @@ void inputTransaksi(int jumlahTransaksi, int *total) {
             printf("Transaksi tidak boleh negatif.\n");
             continue;
         }
-
+        i++;
         *total += transaksi;
     }
 }
