@@ -2,14 +2,27 @@
 
 int main()
 {
-    int tinggi = 5;
-    for (int baris = 1; baris <= tinggi; baris++)
+    for (int i = 1; i <= 5; i++)
     {
-        for (int kolom = 0; kolom < baris; kolom++)
+        printf("%d", i);
+        if (i == 3)
         {
-            printf("* ");
+            break;
         }
-        printf("\n");
     }
+
+    printf("\n");
+
+    for (int j = 1; j <= 5; j++)
+    {
+        if (j == 3)
+        {
+            continue;
+        }
+        printf("%d", j);
+    }
+
+    printf("\n");
+
     return 0;
 }

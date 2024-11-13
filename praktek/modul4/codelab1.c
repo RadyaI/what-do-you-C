@@ -27,7 +27,7 @@ int main()
     if (count > 0)
     {
         average = (float)total / count;
-        printf("\nTotal bilangan: %d\n", total);
+        printf("\nTotal bilangan: %.2f\n", (float)total);
         printf("Rata-rata bilangan: %.2f\n", average);
     }
     else

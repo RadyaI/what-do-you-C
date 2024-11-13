@@ -28,7 +28,7 @@ int main() {
             continue; 
         }
 
-        printf("%c ", str[i]);
+        printf("%c", str[i]);
     }
 
     return 0;

@@ -53,7 +53,7 @@ void tambahTransaksi(int *total, int *jumlahTransaksi) {
             printf("Masukkan nilai transaksi tambahan: ");
             scanf("%d", &transaksi);
 
-            if (transaksi < 0) {
+            if (transaksi < 0) {    
                 printf("Transaksi tidak boleh negatif.\n");
                 continue;
             }
