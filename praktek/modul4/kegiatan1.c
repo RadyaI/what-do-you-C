@@ -6,8 +6,8 @@ void tambahTransaksi(int *total, int *jumlahTransaksi);
 void tampilkanTotal(int total);
 
 int main() {
-    int total = 0;             
-    int jumlahTransaksi = 0;       
+    int total = 0;
+    int jumlahTransaksi = 0;
     jumlahTransaksi = inputJumlahTransaksi();
 
     inputTransaksi(jumlahTransaksi, &total);

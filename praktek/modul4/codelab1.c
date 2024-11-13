@@ -10,7 +10,10 @@ int main()
     while (1)
     {
         printf("Masukkan bilangan bulat positif (masukkan bilangan negatif untuk berhenti):");
-        scanf("%d", &num);
+        if(scanf("%d", &num) != 1){
+            printf("Input Tidak Valid!");
+            return 1;
+        }
 
         if (num < 0)
         {
