@@ -11,7 +11,7 @@ int main()
     for (int i = 0; i < 5; i++)
     {
         printf("%s: %d\n", nama[i], nilai[i]);
-    }
+    }   
 
     printf("\nDaftar nama dan nilai siswa setelah diubah: \n");
     for (int i = 0; i < 5; i++)
