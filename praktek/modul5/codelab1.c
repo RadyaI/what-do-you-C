@@ -10,7 +10,7 @@ int main()
     printf("Daftar nama dan nilai siswa sebelum diubah: \n");
     for (int i = 0; i < 5; i++)
     {
-        printf("%s: %d\n", nama[i], nilai[i]);
+        printf("%d. %s: %d\n", i + 1, nama[i], nilai[i]);
     }   
 
     printf("\nDaftar nama dan nilai siswa setelah diubah: \n");
@@ -21,7 +21,7 @@ int main()
             nilai[i] = 95;
         }
 
-        printf("%s: %d\n", nama[i], nilai[i]);
+        printf("%d. %s: %d\n", i + 1, nama[i], nilai[i]);
     }
 
     return 0;

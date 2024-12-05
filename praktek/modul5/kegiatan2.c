@@ -8,7 +8,7 @@ void tampilkan_tabel(int jumlah_mahasiswa, int nilai[][3], float rata_rata[], fl
 
 int main()
 {
-    int jumlah_mahasiswa;
+    int jumlah_mahasiswa; //3
 
     minta_jumlah_mahasiswa(&jumlah_mahasiswa);
 
