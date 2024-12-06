@@ -3,7 +3,7 @@
 void minta_jumlah_mahasiswa(int *jumlah_mahasiswa);
 void masukkan_nilai_mahasiswa(int jumlah_mahasiswa, int nilai[][3]);
 void hitung_rata_rata_per_matkul(int jumlah_mahasiswa, int nilai[][3], float rata_rata[]);
-float hitung_rata_rata_keseluruhan(float rata_rata[3]);
+float hitung_rata_rata_keseluruhan(float rata_rata[]);
 void tampilkan_tabel(int jumlah_mahasiswa, int nilai[][3], float rata_rata[], float rata_rata_keseluruhan);
 
 int main()
