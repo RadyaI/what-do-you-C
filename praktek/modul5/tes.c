@@ -1,19 +1,28 @@
-// Online C compiler to run C program online
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
 
-    int angka[2][3][4] = {
-        {{1, 2, 3, 4},
-         {5, 6, 7, 8},
-         {9, 10, 11, 12}},
-        // bates
-        {{13, 14, 15, 16},
-         {17, 18, 19, 20},
-         {21, 22, 23, 24}}};
+    char nama[][50] = {"Alice", "Bob","Charlie", "David", "Eva"};
+    int nilai[] = {85, 90, 78, 92, 88};
 
-    printf("%d", angka[1][2][2]); //23
+    printf("Daftar nama dan nilai siswa sebelum diubah: \n");
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d. %s: %d\n", i + 1, nama[i], nilai[i]);//Printf Nama & Nilai Sebelum Diubah
+    }   
+
+    printf("\nDaftar nama dan nilai siswa setelah diubah: \n");
+    for (int i = 0; i < 5; i++)
+    {
+        if (strcmp(nama[i], "David") == 0)//Jika Nama Yang Tertera David Maka Nilai nya akan diubah menjadi 95
+        {
+            nilai[i] = 95;
+        }
+
+        printf("%d. %s: %d\n", i + 1, nama[i], nilai[i]);//Print Nama & Nilai Davud Sesudah Diubah
+    }
 
     return 0;
 }
