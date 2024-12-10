@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 void tulisDataMahasiswa();
 void bacaDataMahasiswa();
@@ -24,7 +23,7 @@ int main() {
                 break;
             case 3:
                 printf("Keluar dari program.\n");
-                exit(0);
+                return 0;
             default:
                 printf("Pilihan tidak valid. Silakan coba lagi.\n");
         }
