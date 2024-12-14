@@ -1,8 +1,8 @@
 Nama: Radya
 NIM: 370
-Program Studi: Informatika
+Program Studi: informatika
 
-Nama: Fulan
-NIM: 543
-Program Studi: Elektro
+Nama: tes
+NIM: 1
+Program Studi: informatika
 
