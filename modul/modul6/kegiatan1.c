@@ -132,7 +132,7 @@ void get()
 
 void update()
 {
-    FILE *file = fopen("produk_toko.txt", "r+");
+    FILE *file = fopen("produk_toko.txt", "r");
     if (file == NULL)
     {
         printf("Gagal membuka file.\n");
