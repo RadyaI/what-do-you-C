@@ -1,1 +1,1 @@
-2,HP Victus,Laptop,8000000.00,20
+1,Asus Tuf,Laptop,10000000.00,15

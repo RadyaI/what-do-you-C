@@ -113,7 +113,7 @@ void get()
     if (file == NULL)
     {
         printf("Gagal membuka file.\n");
-        return;
+        exit(1);
     }
 
     int id;
