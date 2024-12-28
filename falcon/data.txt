@@ -1,0 +1,3 @@
+1,Radya,Informatika
+2,Fulan,Informatika
+3,Udin,Psikologi

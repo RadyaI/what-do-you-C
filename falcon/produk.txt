@@ -1,0 +1,6 @@
+ID: 1
+BARANG: Laptop
+ID: 2
+BARANG: Keyboard
+ID: 3
+BARANG: Handphone
