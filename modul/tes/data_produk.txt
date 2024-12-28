@@ -1,0 +1,6 @@
+ID: 1
+Nama: asus tuff
+Kategori: laptop
+Harga: 1000000
+Stok: 56
+
